@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="Test2(failed)">
+    <parameter name="BROWSER" value="edge"/>
+    <classes>
+      <class name="ContactModule.ContactQueriesTest">
+        <methods>
+          <include name="contactQuery"/>
+          <include name="connectToDB"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="disconnectToDB"/>
+        </methods>
+      </class> <!-- ContactModule.ContactQueriesTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="3" parallel="tests" name="Test3(failed)">
+    <parameter name="BROWSER" value="firefox"/>
+    <classes>
+      <class name="DoctorModule.AddAndManagePatientTest">
+        <methods>
+          <include name="connectToDB"/>
+          <include name="addAndManagepatient"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="disconnectToDB"/>
+        </methods>
+      </class> <!-- DoctorModule.AddAndManagePatientTest -->
+      <class name="DoctorModule.GenerateReportForPatientTest">
+        <methods>
+          <include name="connectToDB"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="disconnectToDB"/>
+          <include name="generatePatientReport"/>
+        </methods>
+      </class> <!-- DoctorModule.GenerateReportForPatientTest -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+</suite> <!-- Failed suite [Suite] -->

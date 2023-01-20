@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Suite">
+	<test name="Test1">
+		<parameter name="BROWSER" value="chrome"></parameter>
+		<classes>
+			<class name="PatientModule.AppointmentHistoryTest" />
+			<class name="AdminModule.ManageDoctorsTest" />
+		</classes>
+	</test>
+	<test name="Test2">
+		<parameter name="BROWSER" value="edge"></parameter>
+		<classes>
+			<class name="ContactModule.ContactQueriesTest" />
+		</classes>
+	</test>
+	<test name="Test3">
+		<parameter name="BROWSER" value="firefox"></parameter>
+		<classes>
+			<class name="DoctorModule.GenerateReportForPatientTest" />
+			<class name="DoctorModule.AddAndManagePatientTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
